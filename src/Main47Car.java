@@ -1,14 +1,19 @@
 public class Main47Car {
     String make;
     String model;
-    String color;
     int year;
+    String color;
 
-    Main47Car (String make, String model, String color, int year){
+    Main47Car (String make, String model, int year, String color){
         this.make = make;
         this.model = model;
         this.year = year;
         this.color = color;
+    }
+
+    @Override
+    public String toString(){
+        return  this.make + " " + this.model + " " + this.year + " " + this.color;
     }
 
 }
