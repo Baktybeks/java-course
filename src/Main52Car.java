@@ -1,5 +1,5 @@
 public class Main52Car {
-    private String model;
+    private final String model;
     private String color;
     private int price;
 
@@ -15,9 +15,20 @@ public class Main52Car {
     String getColor() {
         return this.color;
     }
-    int getPrice() {
-        return this.price;
+
+    String getPrice() {
+        return "$" + this.price;
     }
 
+    void setColor(String color) {
+        this.color = color;
+    }
 
+    void setPrice(int price) {
+        if(price < 0) {
+            System.out.println("price<0");
+        } else {
+            this.price = price;
+        }
+    }
 }
